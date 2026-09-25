@@ -10,7 +10,7 @@ Membangun program validasi dan klasifikasi dengan rantai `if-elif-else`.
 ## Cara Menjalankan
 python3 praktik/validasi_klasifikasi_nilai.py
 
-Tabel Keputusan
+## Tabel Keputusan
 Kategori,Syarat Validasi / Rentang,Contoh Masukan
 Validasi Tipe Data,Semua input harus numerik (float/int),"Ujian: 80, Tugas: 80, Kehadiran: abc (Ditolak)"
 Validasi Rentang,"0≤Ujian,Tugas,Kehadiran≤100","Ujian: 105, Tugas: 80, Kehadiran: 90 (Ditolak)"
@@ -21,7 +21,7 @@ Predikat C,60≤Nilai<70 dan Kehadiran ≥80%,"Ujian: 60, Tugas: 60, Kehadiran: 
 Predikat D,50≤Nilai<60 dan Kehadiran ≥80%,"Ujian: 55, Tugas: 50, Kehadiran: 90"
 Predikat E,Nilai<50 dan Kehadiran ≥80%,"Ujian: 40, Tugas: 30, Kehadiran: 100"
 
-Hasil Pengujian
+## Hasil Pengujian
 Ujian,Tugas,Kehadiran,Nilai Akhir,Keluaran yang Diharapkan,Keluaran Aktual,Status
 Input:90,80,95,hasil yg diharapkan:86.00,"Predikat A, Lulus",hasil percobaan:"Predikat A, Lulus",Sesuai
 Input:75,70,85,hasil yg diharapkan:73.00,"Predikat B, Lulus",hasil percobaan:"Predikat B, Lulus",Sesuai
@@ -33,7 +33,7 @@ Input:105,80,90,hasil yg diharapkan-,:Pesan penolakan rentang nilai ujian,hasil 
 Input:80,-5,90,hasil yg diharapkan:-,Pesan penolakan rentang nilai tugas,hasil percobaan:Masukan ditolak: nilai tugas di luar rentang 0 sampai 100.,Sesuai
 Input:80,80,abc,hasil yg diharapkan:-,Pesan penolakan tipe,hasil percobaan:Masukan ditolak: seluruh data harus berupa angka.,Sesuai
 
-Refleksi
+## Refleksi
 Salah satu masukan tidak valid yang semula berpotensi terlewat adalah penanganan tipe data non-numerik (seperti huruf atau simbol)serta nilai
 rentang di luar 0 hingga 100.Masalah ini ditangani dengan menggunakan blok try-except ValueError untuk menguji konversi tipe data sebelum pengolahan nilai.
 Selain itu, pengecekan rentang dilakukan menggunakan rantai if-elif-else sebelum melakukan kalkulasi nilai akhir dan penentuan predikat,sehingga program 
